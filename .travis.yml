@@ -25,6 +25,6 @@ deploy:
   file: "credentials-to-env-${TRAVIS_TAG}-${TRAVIS_OS_NAME}.*"
   skip_cleanup: true
   on:
-    repo: faradayio/credentials_to_env
+    repo: n1ywb/credentials_to_env
     rust: stable
     tags: true
