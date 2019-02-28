@@ -19,6 +19,7 @@ set -euo pipefail
 rust-musl-builder() {
     echo `ls -l`
     echo `ls -l target`
+    mkdir -p target/release
     echo `ls -l target/release`
     echo "starting rust-musl-builder"
     docker run --rm -it -v "$(pwd)":/home/rust/src ekidd/rust-musl-builder "$@"
