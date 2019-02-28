@@ -17,7 +17,11 @@
 set -euo pipefail
 
 rust-musl-builder() {
+    echo "starting rust-musl-builder"
+    pwd
+    ls -l /home/rust/src/target/release/.cargo-lock
     docker run --rm -it -v "$(pwd)":/home/rust/src ekidd/rust-musl-builder "$@"
+    echo "finished rust-musl-builder"
 }
 
 case `uname -s` in
